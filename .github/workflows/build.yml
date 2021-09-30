@@ -47,9 +47,9 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"AhmedBreak-HM_JWT-Implementation" /o:"ahmedbreak-hm" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
                 dotnet restore
                 dotnet build --configuration --no-restore
-                dotnet test --no-build --verbosity normal
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
   # --------------------------------------------------------------------------------------------------        
   # dotnet build --configuration Release
+  # dotnet test --no-build --verbosity normal
 
                 
